@@ -1,0 +1,29 @@
+﻿<Window x:Class="CounterMVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:CounterMVVM"
+        Title="Counter MVVM" Height="200" Width="300"
+        Closed="WindowClosing">
+
+    <Window.DataContext>
+        <local:CounterViewModel/>
+    </Window.DataContext>
+
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="254*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Content="+" Margin="10,10,5,10" Command="{Binding IncrementCommand}" Grid.ColumnSpan="2"/>
+        <Button Content="-" Margin="10,5,5,15" Command="{Binding DecrementCommand}" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="2" Text="{Binding CounterValue}" FontSize="30" HorizontalAlignment="Left" Margin="142,10,0,14"/>
+        <TextBlock Grid.Row="2" x:Name="ww" FontSize="30" HorizontalAlignment="Left" Margin="172,10,0,14"/>
+    </Grid>
+
+</Window>

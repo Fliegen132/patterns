@@ -1,0 +1,32 @@
+﻿<Window x:Class="AbstractFactory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AbstractFactory"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="cmbColors" Margin="49,179,535,179" >
+        <ComboBoxItem>
+                <TextBlock Foreground="Orange">Orange Square</TextBlock>
+        </ComboBoxItem>
+        <ComboBoxItem>
+                <TextBlock Foreground="Black">Black Square</TextBlock>
+        </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock Foreground="Black">Black Circle</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock Foreground="Orange">Orange Circle</TextBlock>
+            </ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="createBtn" Margin="92,270,578,99" Content="Создать" Click="createBtn_Click">
+            
+        </Button>
+
+        <Canvas Margin="301,54,37,53" x:Name="CanvasCreator">
+            
+        </Canvas>
+    </Grid>
+</Window>
